@@ -5,6 +5,12 @@ import { submittedTunes } from '../stores/tuneStore';
     let id = Math.max.apply(Math, $submittedTunes.map(function(o) { return o.id; }));
     return id ;
   }
+//"https://open.spotify.com/embed/track/3vYxoh9Y7L5Tdr0mhaAaUu?theme=0"
+	function validateIdThenAdd(spotifyLink) {
+		let trackId = spotifyLink.toString().split("/")[5].split('?')[0];
+		console.log(trackId);
+		//add(trackId);
+	}
 
  function add(input) {
     // get max id to ensure we don't repeat/miss any ids out.
@@ -32,7 +38,7 @@ import { submittedTunes } from '../stores/tuneStore';
 	</h2>
 	<input type="text" 
 	 placeholder="paste a spotify link or track id here"
-	 on:keydown={e => e.key === 'Enter' && add(e.target)}
+	 on:keydown={e => e.key === 'Enter' && validateIdThenAdd(e.target.value.toString())}
 	/>
 
 </main>
