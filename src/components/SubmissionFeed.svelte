@@ -9,6 +9,10 @@
 	<div class="tune {tune.isLiked ? 'tune__liked' : ''}">
     <span>
       <div>{tune.spotifyUrl}</div>
+			<iframe title="Spotify player for Ben Bohmer's Fleiderling" 
+	src="https://open.spotify.com/embed/track/{tune.spotifyUrl}?theme=0" 
+	width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+	
       <div>Submitted By: {tune.submittedBy} on {tune.dateSubmitted}</div>
       <div>Reviewed? {tune.hasBeenReviewed === true ? '✔' : '❌'}</div>
     </span>

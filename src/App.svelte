@@ -8,9 +8,6 @@
 
 	<h4>I'm on a mission to see if I can find 1 million tunes that I like.</h4>
 	<h4>Wanna help me find them? Just look up a tune from spotify below!</h4>
-	<iframe title="Spotify player for Ben Bohmer's Fleiderling" 
-	src="https://open.spotify.com/embed/track/3vYxoh9Y7L5Tdr0mhaAaUu?theme=0" 
-	width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 	<SubmitTune />
 	<SubmissionFeed />
 </main>

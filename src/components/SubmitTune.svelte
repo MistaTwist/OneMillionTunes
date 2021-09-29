@@ -15,10 +15,20 @@ import { submittedTunes } from '../stores/tuneStore';
 			trackId = sLink.split("https://open.spotify.com/track/")[1].toString().split('?')[0]
 		}
 
-		if(trackId.length > 0) {
+		if( trackId.length > 0 && !trackInStore(trackId) ) {
 			add(trackId);
 		}
+
 		input.value = '';
+	}
+
+	function trackInStore(trackId) {
+		let recordCount = '';
+		//eventually to be a DB Query
+		recordCount = $submittedTunes.find(t => t.spotifyUrl === trackId);
+		console.log(recordCount !== undefined);
+ 
+		return recordCount !== undefined;
 	}
 
  function add(trackId) {
@@ -27,9 +37,9 @@ import { submittedTunes } from '../stores/tuneStore';
     console.log(newId);
 
 		const tune = {
-			id: newId, 
-			hasBeenReviewed: false, 
-			submittedBy: 'TBC', 
+			id: newId,
+			hasBeenReviewed: false,
+			submittedBy: 'TBC',
 			spotifyUrl: trackId,
 			isLiked: null,
 			dateSubmitted: new Date().toLocaleDateString()
