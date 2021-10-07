@@ -1,9 +1,11 @@
 <script>
 	import SubmitTune from "./components/SubmitTune.svelte";
 	import SubmissionFeed from "./components/SubmissionFeed.svelte";
+	import Test from "./components/Test.svelte";
 </script>
 
 <main>
+	<Test />
 	<h1>One Million Tunes (mvp)</h1>
 
 	<h4>I'm on a mission to see if I can find 1 million tunes that I like.</h4>
@@ -20,8 +22,10 @@
 		background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 100%, rgba(252,176,69,1) 100%);
 	}
 	main {
-		padding: 1em;
-		max-width: 60%;
+		/*padding: 1em;
+		*/
+		max-width: 75%;
+		margin: 0 auto;
 		color: white;
 	}
 	

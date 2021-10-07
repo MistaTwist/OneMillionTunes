@@ -58,7 +58,6 @@ import { submittedTunes } from '../stores/tuneStore';
 	 placeholder="paste a spotify link or track id here"
 	 on:keydown={e => e.key === 'Enter' && validateIdThenAdd(e.target)}
 	/>
-
 </main>
 
 <style>
