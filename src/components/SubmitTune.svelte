@@ -39,7 +39,7 @@ import { submittedTunes } from '../stores/tuneStore';
 		const tune = {
 			id: newId,
 			hasBeenReviewed: false,
-			submittedBy: 'TBC',
+			submittedBy: 'test_phase',
 			spotifyUrl: trackId,
 			isLiked: null,
 			dateSubmitted: new Date().toLocaleDateString()

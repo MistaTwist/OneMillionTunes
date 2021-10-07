@@ -1,7 +1,10 @@
 <script>
+
 	import SubmitTune from "./components/SubmitTune.svelte";
 	import SubmissionFeed from "./components/SubmissionFeed.svelte";
 	import Test from "./components/Test.svelte";
+
+	const latest = {};
 </script>
 
 <main>
@@ -10,7 +13,7 @@
 	<p>I'm on a mission to see if I can find 1 million tunes that I like.</p>
 	<p>Wanna help me find them? Just look up a tune from spotify below!</p>
 	<SubmitTune />
-	<SubmissionFeed />
+	<SubmissionFeed latest={latest}/>
 </main>
 
 <style>

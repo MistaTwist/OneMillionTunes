@@ -7,7 +7,12 @@
 	<div class="submissionFeed">
 		<h2>Recent Submissions:</h2>
 		{#each $submittedTunes as tune} 
-		<div class="tune {tune.isLiked ? 'tune__liked' : ''}">
+		<div class="tune {!tune.hasBeenReviewed 
+			? "tune" 
+			: tune.isLiked
+				? 'tune__liked' 
+				: 'tune__disliked'
+		}">
 			<span>
 				<div>
 					<iframe title="Spotify player" 
@@ -38,6 +43,9 @@
 		margin-bottom: 1rem;
 	}
 	.tune__liked {
-		background-color: #bada55;
+		background-color: #25BB90;
+	}
+	.tune__disliked {
+		background-color: #B0000B;
 	}
 </style>
