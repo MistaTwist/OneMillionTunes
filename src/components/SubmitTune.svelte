@@ -61,6 +61,9 @@ import { submittedTunes } from '../stores/tuneStore';
 </main>
 
 <style>
+	main {
+		margin: 2em 0em;
+	}
 	input {
 		width: 100%;
 		font-size: 1.4em;

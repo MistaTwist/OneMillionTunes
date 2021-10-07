@@ -24,7 +24,10 @@
 
 <style>
 	.submissionFeed{
-		border: 5px solid yellow;
+		/*
+		border: 5px solid yellow;*
+		*/
+		padding: 0px;
 	}
 	.tune {
 		border: 4px solid black;

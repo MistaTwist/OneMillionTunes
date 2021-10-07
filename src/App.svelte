@@ -5,11 +5,10 @@
 </script>
 
 <main>
-	<Test />
-	<h1>One Million Tunes (mvp)</h1>
+	<h1>One Million Tunes v0.1</h1>
 
-	<h4>I'm on a mission to see if I can find 1 million tunes that I like.</h4>
-	<h4>Wanna help me find them? Just look up a tune from spotify below!</h4>
+	<p>I'm on a mission to see if I can find 1 million tunes that I like.</p>
+	<p>Wanna help me find them? Just look up a tune from spotify below!</p>
 	<SubmitTune />
 	<SubmissionFeed />
 </main>
@@ -20,6 +19,10 @@
 		display: block;
 		background: rgb(131,58,180);
 		background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 100%, rgba(252,176,69,1) 100%);
+	}
+	p {
+		font-weight: 400;
+		font-size: large;
 	}
 	main {
 		/*padding: 1em;
