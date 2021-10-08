@@ -34,5 +34,8 @@ else {
 
 const db = getFirestore(firebaseApp);
 
+const submissions = collection(db, 'submittedTracks')
+
+console.table(submissions)
 const q_latest = query(collection(db, "submittedTracks"), orderBy("dateSubmitted", "desc"), limit(20) );
 </script>
