@@ -16,7 +16,6 @@ import {
   setDoc,
   onSnapshot,
 } from "firebase/firestore";
-import { outro_and_destroy_block } from "svelte/internal";
 
 import {firebaseConfig} from "../lib/firebaseConfig"
 
@@ -30,7 +29,6 @@ else {
   getApp();
 }
 // endregion initialise firebase App
-
 
 const db = getFirestore(firebaseApp);
 

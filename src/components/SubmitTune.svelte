@@ -1,5 +1,6 @@
 <script>
 import { submittedTunes } from '../stores/tuneStore';
+import { doc, setDoc } from "firebase/firestore"; 
 
  function getMaxId() {
     let id = Math.max.apply(Math, $submittedTunes.map(function(o) { return o.id; }));
@@ -44,7 +45,6 @@ import { submittedTunes } from '../stores/tuneStore';
 			isLiked: null,
 			dateSubmitted: new Date().toLocaleDateString()
 		};
-
 		$submittedTunes = [tune, ...$submittedTunes];
 	}
 </script>
