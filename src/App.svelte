@@ -24,16 +24,6 @@ QuerySnapshot,
 
 import { firebaseConfig } from './lib/firebaseConfig';
 
-// firebaseConfig = {
-//   apiKey: process.env.FRBS_APIKEY,
-//   authDomain: process.env.FRBS_AUTH_DOMAIN,
-//   projectId: process.env.FRBS_PROJECT_ID,
-//   databaseURL: process.env.FRBS_DB_URL,
-//   storageBucket: process.env.FRBS_STORAGE_BUCKET,
-//   messagingSenderId: process.env.FRBS_MESSAGING_SENDER,
-//   appId: process.env.APPID
-// }
-
 const firebaseApp = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
 
 const db = getFirestore(firebaseApp);
